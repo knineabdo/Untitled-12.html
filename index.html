@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <figure class="md:flex bg-black-auto rounded-xl p-8 md:p-0">
+      <div class="container">
+        <div class="d-flex flex-column justify-content-auto text-auto">
+          <div class="max-w-7xl mx-center">
+            <div
+              class="relative z-10 pb-8 bg-dark-800 sm:pb-10 md:pb-2 lg:max-w-6.5xl lg:w-full lg:pb-20 :pb-12"
+            >
+              <svg
+                class="hidden h-full w-48 text-white transform translate-x-1/2"
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <polygon points="50,0 100,0 50,100 0,100" />
+              </svg>
+
+              <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                <nav
+                  class="relative flex items-auto justify-between sm:h-10 lg:justify-content-auto"
+                  aria-label="Global"
+                >
+                  <div
+                    class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
+                  >
+                    <div
+                      class="flex items-center justify-between w-full md:w-auto"
+                    >
+                      <a class="text-blue-gray-700 hover:text-primary" href="">
+                        <svg
+                          width="149"
+                          height="19"
+                          class="fill-current inline-block align-middle text-gray-900"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.7 10.6c0-.547-.18-.98-.54-1.3-.36-.32-.813-.593-1.36-.82a17.97 17.97 0 00-1.76-.66 9.591 9.591 0 01-1.76-.8A4.33 4.33 0 01.92 5.78C.56 5.273.38 4.613.38 3.8c0-1.133.413-2.047 1.24-2.74C2.46.367 3.653.02 5.2.02c.893 0 1.713.067 2.46.2.747.133 1.333.307 1.76.52L8.8 2.42c-.333-.173-.833-.327-1.5-.46-.667-.147-1.4-.22-2.2-.22-.907 0-1.587.193-2.04.58-.453.387-.68.833-.68 1.34 0 .52.18.94.54 1.26.36.32.813.607 1.36.86.547.24 1.133.473 1.76.7a9.722 9.722 0 011.76.84c.547.333 1 .747 1.36 1.24.36.48.54 1.1.54 1.86 0 .627-.12 1.193-.36 1.7-.24.507-.587.94-1.04 1.3-.453.36-1 .64-1.64.84-.64.187-1.367.28-2.18.28-1.093 0-2.02-.087-2.78-.26-.747-.16-1.313-.333-1.7-.52l.66-1.74c.333.173.833.353 1.5.54.68.173 1.427.26 2.24.26.467 0 .9-.04 1.3-.12.4-.093.747-.227 1.04-.4.307-.187.54-.42.7-.7.173-.28.26-.613.26-1zM10.741 3.78h1.78V1.66l1.84-.48v2.6h3.16v1.56h-3.16v5.36c0 .84.107 1.433.32 1.78.213.347.58.52 1.1.52.333 0 .633-.033.9-.1.28-.08.593-.18.94-.3l.42 1.3c-.427.187-.887.34-1.38.46-.48.133-1 .2-1.56.2-.933 0-1.6-.253-2-.76-.387-.507-.58-1.333-.58-2.48V5.34h-1.78V3.78zM19.607 4.44c1.2-.573 2.686-.86 4.46-.86.8 0 1.44.107 1.92.32.493.2.873.46 1.14.78.266.32.44.68.52 1.08.093.387.14.773.14 1.16 0 .733-.027 1.473-.08 2.22-.054.733-.08 1.533-.08 2.4 0 .507.02 1 .06 1.48.053.467.133.9.24 1.3h-1.34l-.5-1.6h-.2c-.147.2-.327.407-.54.62-.214.2-.467.38-.76.54a4.79 4.79 0 01-2.32.56 4.41 4.41 0 01-1.36-.2 3.533 3.533 0 01-1.08-.6 2.81 2.81 0 01-.7-.92 2.908 2.908 0 01-.26-1.24c0-.6.126-1.12.38-1.56.266-.44.606-.8 1.02-1.08.413-.28.88-.487 1.4-.62.533-.133 1.06-.2 1.58-.2.413 0 .76.007 1.04.02.293.013.533.033.72.06.2.013.366.033.5.06.133.013.253.027.36.04.026-.2.046-.373.06-.52.013-.147.02-.333.02-.56 0-.373-.04-.687-.12-.94a1.199 1.199 0 00-.4-.6c-.174-.16-.414-.273-.72-.34-.307-.067-.68-.1-1.12-.1a7.466 7.466 0 00-1.76.24 7.916 7.916 0 00-.92.26c-.294.107-.56.22-.8.34l-.5-1.54zm6.26 5.08a3.668 3.668 0 01-.34-.06 3.253 3.253 0 00-.46-.06 27.263 27.263 0 00-.64-.04c-.24-.013-.54-.02-.9-.02-.827 0-1.487.147-1.98.44-.48.293-.72.793-.72 1.5 0 .533.186.933.56 1.2.386.267.88.4 1.48.4.44 0 .826-.053 1.16-.16.346-.12.64-.26.88-.42.253-.173.453-.36.6-.56.16-.213.28-.42.36-.62v-1.6zM36.447 5.52a16.691 16.691 0 00-.66-.18 2.48 2.48 0 00-.6-.08c-.706 0-1.26.18-1.66.54-.386.36-.627.813-.72 1.36v7.12h-1.84V3.78h1.28l.36 1.4h.18c.307-.52.66-.92 1.06-1.2.413-.293.927-.44 1.54-.44.187 0 .407.02.66.06.254.027.507.08.76.16l-.36 1.76zM37.49 3.78h1.78V1.66l1.84-.48v2.6h3.16v1.56h-3.16v5.36c0 .84.107 1.433.32 1.78.214.347.58.52 1.1.52.334 0 .634-.033.9-.1.28-.08.594-.18.94-.3l.42 1.3c-.426.187-.886.34-1.38.46-.48.133-1 .2-1.56.2-.933 0-1.6-.253-2-.76-.386-.507-.58-1.333-.58-2.48V5.34h-1.78V3.78zM48.316 3.78v5.78c0 .56.033 1.053.1 1.48.066.427.186.787.36 1.08.173.28.406.5.7.66.306.147.693.22 1.16.22.8 0 1.453-.227 1.96-.68a4.419 4.419 0 001.16-1.68V3.78h1.84v7.52c0 .507.02 1.027.06 1.56.04.52.1.993.18 1.42h-1.24l-.48-1.74h-.2a4.081 4.081 0 01-1.44 1.46c-.614.373-1.38.56-2.3.56-.614 0-1.154-.073-1.62-.22a2.67 2.67 0 01-1.16-.74c-.307-.36-.54-.833-.7-1.42-.147-.587-.22-1.32-.22-2.2v-6.2h1.84zM58.947 3.78h1.24l.36 1.34h.18c.36-.52.827-.92 1.4-1.2.573-.293 1.22-.44 1.94-.44 1.52 0 2.653.427 3.4 1.28.746.84 1.12 2.187 1.12 4.04 0 .88-.127 1.68-.38 2.4a5.041 5.041 0 01-1.06 1.82 4.529 4.529 0 01-1.68 1.14c-.653.267-1.387.4-2.2.4-.267 0-.514-.013-.74-.04a2.818 2.818 0 01-.6-.1 8.594 8.594 0 01-.56-.14c-.187-.067-.38-.14-.58-.22v4.22h-1.84V3.78zm4.7 1.26c-.8 0-1.427.2-1.88.6-.454.4-.78 1.013-.98 1.84v4.84c.306.213.64.38 1 .5s.82.18 1.38.18c1.08 0 1.927-.353 2.54-1.06.613-.707.92-1.76.92-3.16 0-1.133-.227-2.04-.68-2.72-.454-.68-1.22-1.02-2.3-1.02zM81.9 10.44c0-.413-.173-.74-.52-.98a6.2 6.2 0 00-1.3-.66c-.507-.2-1.06-.4-1.66-.6-.6-.2-1.16-.467-1.68-.8a4.605 4.605 0 01-1.28-1.26c-.347-.507-.52-1.167-.52-1.98 0-.693.12-1.3.36-1.82.253-.533.6-.967 1.04-1.3a4.695 4.695 0 011.62-.78C78.6.087 79.3 0 80.06 0c.88 0 1.713.08 2.5.24.8.147 1.453.36 1.96.64l-.94 2.48a3.99 3.99 0 00-.62-.28 4.165 4.165 0 00-.84-.26 7.72 7.72 0 00-1.02-.18 7.497 7.497 0 00-1.1-.08c-.667 0-1.187.12-1.56.36-.36.227-.54.547-.54.96 0 .413.173.747.52 1 .347.24.773.467 1.28.68.52.2 1.08.407 1.68.62.6.2 1.153.467 1.66.8.52.32.953.727 1.3 1.22.347.493.52 1.127.52 1.9 0 .773-.133 1.44-.4 2a3.756 3.756 0 01-1.14 1.4c-.48.36-1.06.627-1.74.8-.68.173-1.427.26-2.24.26-.547 0-1.067-.033-1.56-.1-.48-.053-.927-.12-1.34-.2-.413-.093-.78-.187-1.1-.28a6.435 6.435 0 01-.74-.3l.98-2.5c.147.08.347.167.6.26.267.093.56.187.88.28.32.08.66.147 1.02.2.373.053.747.08 1.12.08.88 0 1.547-.127 2-.38.467-.253.7-.647.7-1.18zM100.384 18.52c-.36.093-.713.153-1.06.18-.347.04-.693.06-1.04.06-.733 0-1.453-.067-2.16-.2a29.884 29.884 0 01-2.02-.46c-.64-.16-1.267-.307-1.88-.44-.6-.133-1.167-.2-1.7-.2-.36 0-.7.04-1.02.12v-2.6c.413-.08.827-.12 1.24-.12.6 0 1.2.067 1.8.2.613.133 1.233.273 1.86.42.627.16 1.267.307 1.92.44.667.133 1.36.2 2.08.2a9.88 9.88 0 001.98-.2v2.6zM85.944 7.28c0-1.147.147-2.173.44-3.08.293-.907.713-1.667 1.26-2.28A5.37 5.37 0 0189.684.5c.8-.333 1.707-.5 2.72-.5 1.08 0 2.02.18 2.82.54.813.347 1.487.84 2.02 1.48.547.64.953 1.407 1.22 2.3.28.893.42 1.88.42 2.96 0 1.147-.153 2.173-.46 3.08-.293.907-.72 1.673-1.28 2.3a5.68 5.68 0 01-2.04 1.42c-.8.32-1.7.48-2.7.48-1.08 0-2.027-.173-2.84-.52-.8-.36-1.473-.86-2.02-1.5-.533-.64-.933-1.407-1.2-2.3-.267-.893-.4-1.88-.4-2.96zm3.14 0c0 .693.067 1.327.2 1.9s.333 1.067.6 1.48c.267.413.607.733 1.02.96.427.227.927.34 1.5.34 1.053 0 1.873-.36 2.46-1.08.587-.72.88-1.92.88-3.6 0-.667-.06-1.287-.18-1.86-.12-.573-.32-1.067-.6-1.48a2.714 2.714 0 00-1.04-.98c-.413-.24-.92-.36-1.52-.36-1.04 0-1.853.373-2.44 1.12-.587.747-.88 1.933-.88 3.56zM108.835.28h2.8v8.98c0 .907-.133 1.693-.4 2.36-.253.667-.62 1.213-1.1 1.64a4.521 4.521 0 01-1.7.96c-.653.2-1.373.3-2.16.3-1.88 0-3.313-.407-4.3-1.22-.987-.827-1.48-2.06-1.48-3.7V.28h2.96v8.78c0 1.067.233 1.813.7 2.24.467.413 1.16.62 2.08.62.88 0 1.533-.22 1.96-.66.427-.453.64-1.187.64-2.2V.28zM121.269 11.3h-4.72l-1.14 2.98h-2.96l5.48-14.1h2.18l5.5 14.1h-3.14l-1.2-2.98zm-3.9-2.34h3.2l-1.08-2.92-.48-2.22h-.1l-.48 2.24-1.06 2.9zM126.513.42c.32-.053.667-.1 1.04-.14.387-.053.774-.093 1.16-.12.387-.027.76-.047 1.12-.06.374-.013.714-.02 1.02-.02.707 0 1.4.06 2.08.18a5.86 5.86 0 011.84.62c.547.293.987.7 1.32 1.22.334.507.5 1.147.5 1.92 0 1.147-.286 2.093-.86 2.84-.56.733-1.34 1.233-2.34 1.5l1.06.62 3.5 5.3h-3.44l-3.48-5.42-1.56-.24v5.66h-2.96V.42zm4.54 2.26c-.306 0-.606.007-.9.02-.28 0-.506.02-.68.06v3.86h1.26c.84 0 1.5-.16 1.98-.48.494-.32.74-.873.74-1.66 0-.587-.206-1.033-.62-1.34-.413-.307-1.006-.46-1.78-.46zM139.16.28h9.02v2.6h-6.06v3.04h5.5v2.6h-5.5v3.16h6.16v2.6h-9.12v-14z"
+                          ></path>
+                        </svg>
+                      </a>
+                      <div class="-mr-2 flex items-center md:hidden">
+                        <button
+                          type="button"
+                          class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Open main menu</span>
+
+                          <svg
+                            class="h-6 w-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="navbar-collapse collapse show"
+                    id="navbar-content"
+                  >
+                    <div class="hidden md:block md:ml- md:pr-4 md:space-x-8">
+                      <a
+                        href="#"
+                        class="font-medium text-gray-500 hover:text-blue-900"
+                        data-hover="Product"
+                        >Product</a
+                      >
+                      <a
+                        href="#"
+                        class="font-medium text-gray-500 hover:text-gray-900"
+                        >Features</a
+                      >
+
+                      <a
+                        href="#"
+                        class="font-medium text-gray-500 hover:text-gray-900"
+                        >Entreprise</a
+                      >
+
+                      <a
+                        href="#"
+                        class="font-medium text-gray-500 hover:text-gray-900"
+                        >About</a
+                      >
+
+                      <a
+                        href="#"
+                        class="font-medium text-gray-500 hover:text-gray-900"
+                        >Log in</a
+                      >
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </figure>
+    <div
+      class="d-flex flex-column justify-content-center text-center sm:px0 md:mt-20"
+    >
+      <h1 class="">
+        <p class="mt-2 max-w-2xl text-xl lg:mx-auto sm:text-3xl md:text-center">
+          <span class="s-text-color-black" style="text-align: center"
+            >Building connections between
+          </span>
+          <strong class="">African,</strong>
+
+          <span class="">
+            <strong>startup,</strong>
+          </span>
+          <span class=""></span>
+          <span class="">
+            <strong>Investors,</strong>
+          </span>
+          <strong>
+            <span class=""> corporates</span>
+          </strong>
+          <span class="">and</span>
+
+          <span class="">
+            <strong> Innovation hubs</strong>
+          </span>
+        </p>
+      </h1>
+      <div class="body-content">
+        <p
+          class="mt- text-base text-blue-600 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-10 md:text-xl lg:mx-center"
+          style="text-align: center"
+        >
+          Une communauté où se croisent startups, investisseurs, corporates et
+          hubs d'innovations regroupant les 4 acteurs piliers de l’écosystème
+          d’innovation des startups en Afrique.
+        </p>
+      </div>
+
+      <div class="mt-5 sm:mt-10 sm:flex sm:justify-center lg:justify-center">
+        <div class="rounded-md shadow">
+          <a
+            href="#"
+            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-cyan-700 md:py-1 md:text-lg md:px-10"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-screen-lg xl:max-w-screen-xl py-14 mx-auto md:px-40 mt-10"
+    >
+      <div class="container">
+        <div class="top-home center">
+          <div class="text-center">
+            <video autoplay="" muted="" playsinline="">
+              <source
+                src="https://www.start.io/wp-content/uploads/2021/01/HeroMap_Start-lo.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="text-centre">
+        <p
+          class="mt-2 max-w-2xl text-xl lg:mx-auto sm:text-4xl md:text-center md:p-10"
+        >
+          <span>
+            <strong>Chiffres clés</strong>
+          </span>
+        </p>
+      </div>
+
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-1 xl:grid-cols-4 gap-4 md:p-10"
+      >
+        <li x-for="item in items">
+          <a
+            class="hover:bg-light-blue-500 hover:border-transparent hover:shadow-lg group block rounded-lg p-4 border border-gray-200"
+          >
+            <dl
+              class="grid sm:block lg:grid xl:block grid-cols-3 grid-rows-2 items-center"
+            >
+              <div class="md:text-center">
+                <dt class="sr-only">Title</dt>
+                <h2 class="font-medium text-black sm:text-5xl">+1000</h2>
+                <p class="text-gray-400">Starups</p>
+              </div>
+            </dl>
+          </a>
+        </li>
+        <li x-for="item in items">
+          <a
+            :
+            class="hover:bg-light-blue-500 hover:border-transparent hover:shadow-lg group block rounded-lg p-4 border border-gray-200"
+          >
+            <div class="md:text-center">
+              <dt class="sr-only">Title</dt>
+              <h2 class="font-medium text-black sm:text-5xl">100</h2>
+              <p class="text-gray-400">Investisseurs</p>
+            </div>
+          </a>
+        </li>
+
+        <li x-for="item in items">
+          <a
+            :
+            class="hover:bg-light-blue-500 hover:border-transparent hover:shadow-lg group block rounded-lg p-4 border border-gray-200"
+          >
+            <div class="md:text-center">
+              <dt class="sr-only">Title</dt>
+              <h2 class="font-medium text-black sm:text-5xl">150</h2>
+              <p class="text-gray-400">Corporates</p>
+            </div>
+          </a>
+        </li>
+
+        <li x-for="item in items">
+          <a
+            :
+            class="hover:bg-light-blue-500 hover:border-transparent hover:shadow-lg group block rounded-lg p-4 border border-gray-200"
+          >
+            <div class="md:text-center">
+              <dt class="sr-only">Title</dt>
+              <h2 class="font-medium text-black sm:text-5xl">300</h2>
+              <p class="text-gray-400">Mentors, Coach, Experts</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="md:mt-16 lg:mt-20 lg:px-20">
+      <div class="sm:text-5xl text-center mt-6">
+        <b>Pourquoi? </b>
+      </div>
+      <div class="p-8 md:p-4 mt-4 text-center">
+        <p>Découvrez comment StartupSquare peut changer votre vie !</p>
+      </div>
+      <figure class="md:flex bg-gray-0 rounded-xl mt-6">
+        <img
+          class="md:rounded-none rounded-full mx-auto"
+          src="file:///C:/Users/hpc/Desktop/index/220592_707122.webp"
+          alt=""
+          width="484"
+          height="612"
+        />
+
+        <form class="flex-auto p-1">
+          <h1 class="flex-auto text-5xl font-semibold">Investisseurs</h1>
+          <div class="w-full flex-none mt-4">
+            Investissez intelligemment grâce à :
+          </div>
+
+          <div>
+            <ol>
+              <li class="mt-3">
+                1: Un hub de startups innovantes pour y trouver vos partenaires
+                clés
+              </li>
+              <li class="mt-3">
+                2: Des tableaux de bord et des mesures de performance pour
+                suivre, monitorer et suivre en temps réel les startups de votre
+                portefeuille
+              </li>
+              <li class="mt-3">
+                3: Des outils puissants pour simplifier votre due diligence
+              </li>
+              <li class="mt-3">
+                4: Des outils pour générer des rapports et des données pour
+                identifier et évaluer rapidement les opportunités.
+              </li>
+              <li class="mt-3">
+                5: Un fil d'actualité sur-mesure pour ne rater aucune
+                opportunité d'investissement.
+              </li>
+            </ol>
+            <a href="#" class="mt-5 flex text-blue-600 hover:underline">
+              Get started
+            </a>
+          </div>
+        </form>
+      </figure>
+    </section>
+
+    <section class="md:flex md:mt-16 lg:mt-20 lg:px-20">
+      <figure class="md:flex bg-gray-0 rounded-xl">
+        <div>
+          <b class="mt-4 text-5xl"> Startups </b>
+          <p class="mt-4">C'est "the place to be" pour :</p>
+          <ol>
+            <li class="mt-3">
+              1: Identifier des investisseurs pertinents, pour scaler votre
+              aventure
+            </li>
+            <li class="mt-3">
+              2:Trouver votre co-fondateur ou simplement la perle rare pour
+              compléter votre équipe
+            </li>
+            <li class="mt-3">
+              3: Explorer les collaborations potentielles avec les plus grands
+              groupes
+            </li>
+            <li class="mt-3">
+              4: Rentrer en contact avec des hubs d'innovations pour se faire
+              accompagner
+            </li>
+            <li class="mt-3">
+              5: Retrouver tous les programmes d’innovation, compétitions pour
+              saisir la prochaine opportunité et rester informé de l'actualité
+              du monde de la Startup
+            </li>
+            <li class="mt-3">
+              6:Partager votre histoire sur notre plateforme dès le lancement
+              votre produit, décrocher un contrat ou signer un partenariat
+            </li>
+            <li class="mt-3">
+              7:Accéder à des centaines de contenus vidéos dédiés aux startups
+            </li>
+
+            <b class="mt-3"
+              >Cerise sur le gâteau, on vous offre votre landing page sur mesure
+              et en un clic !</b
+            >
+          </ol>
+          <a href="#" class="mt-5 flex text-blue-600 hover:underline">
+            Get started
+          </a>
+        </div>
+
+        <div>
+          <img
+            class="md:rounded-none rounded-full mx-auto"
+            src="file:///C:/Users/hpc/Desktop/index/237940_295587%20(1).webp"
+            alt=""
+            width="484"
+            height="612"
+          />
+        </div>
+      </figure>
+    </section>
+
+    <section class="md:mt-16 lg:mt-20 lg:px-20">
+      <figure class="md:flex bg-gray-0 rounded-xl">
+        <img
+          class="md:rounded-none rounded-full mx-auto"
+          src="file:///C:/Users/hpc/Desktop/index/220592_707122.webp"
+          alt=""
+          width="484"
+          height="612"
+        />
+
+        <form class="flex-auto p-1">
+          <h1 class="flex-auto text-5xl font-semibold">Investisseurs</h1>
+          <div class="w-full flex-none mt-4">
+            Investissez intelligemment grâce à :
+          </div>
+
+          <div>
+            <ol>
+              <li class="mt-3">
+                1: Un hub de startups innovantes pour y trouver vos partenaires
+                clés
+              </li>
+              <li class="mt-3">
+                2: Des tableaux de bord et des mesures de performance pour
+                suivre, monitorer et suivre en temps réel les startups de votre
+                portefeuille
+              </li>
+              <li class="mt-3">
+                3: Des outils puissants pour simplifier votre due diligence
+              </li>
+              <li class="mt-3">
+                4: Des outils pour générer des rapports et des données pour
+                identifier et évaluer rapidement les opportunités.
+              </li>
+              <li class="mt-3">
+                5: Un fil d'actualité sur-mesure pour ne rater aucune
+                opportunité d'investissement.
+              </li>
+            </ol>
+            <a href="#" class="mt-5 flex text-blue-600 hover:underline">
+              Get started
+            </a>
+          </div>
+        </form>
+      </figure>
+    </section>
+
+    <section class="md:flex md:mt-16 lg:mt-20 lg:px-20">
+      <figure class="md:flex bg-gray-0 rounded-xl">
+        <div>
+          <b class="mt-4 text-5xl"> Startups </b>
+          <p class="mt-4">C'est "the place to be" pour :</p>
+          <ol>
+            <li class="mt-3">
+              1: Identifier des investisseurs pertinents, pour scaler votre
+              aventure
+            </li>
+            <li class="mt-3">
+              2:Trouver votre co-fondateur ou simplement la perle rare pour
+              compléter votre équipe
+            </li>
+            <li class="mt-3">
+              3: Explorer les collaborations potentielles avec les plus grands
+              groupes
+            </li>
+            <li class="mt-3">
+              4: Rentrer en contact avec des hubs d'innovations pour se faire
+              accompagner
+            </li>
+            <li class="mt-3">
+              5: Retrouver tous les programmes d’innovation, compétitions pour
+              saisir la prochaine opportunité et rester informé de l'actualité
+              du monde de la Startup
+            </li>
+            <li class="mt-3">
+              6:Partager votre histoire sur notre plateforme dès le lancement
+              votre produit, décrocher un contrat ou signer un partenariat
+            </li>
+            <li class="mt-3">
+              7:Accéder à des centaines de contenus vidéos dédiés aux startups
+            </li>
+
+            <b class="mt-3"
+              >Cerise sur le gâteau, on vous offre votre landing page sur mesure
+              et en un clic !</b
+            >
+          </ol>
+          <a href="#" class="mt-5 flex text-blue-600 hover:underline">
+            Get started
+          </a>
+        </div>
+
+        <div class="">
+          <img
+            class="rounded-full max-w-screen-lg"
+            src="file:///C:/Users/hpc/Desktop/index/237940_295587%20(1).webp"
+            alt=""
+            width="484"
+            height="612"
+          />
+        </div>
+      </figure>
+    </section>
+
+    <div>
+      <div class="sm:text-5xl text-center mt-4 lg:mt-40">
+        <b>Startups</b>
+      </div>
+
+      <div section class="md:flex bg-gray-0 rounded-xl">
+        <figure class="rounded-xl p-8 lg:px-48">
+          <img
+            class="w-32 h-32 rounded-full mx-auto"
+            src="file:///C:/Users/hpc/Desktop/index2/802514_190523.webp"
+            alt=""
+            width="384"
+            height="512"
+          />
+
+          <figcaption class="font-medium text-center">
+            <div class="text-cyan-600 mt-4">Mohamed Alaoui</div>
+            <div class="text-gray-500 mt-4">
+              CEO et Co-Fondateur Linkommunity
+            </div>
+          </figcaption>
+          <div>
+            <p class="text-center mt-10">🔶 🔶 🔶 🔶 🔶 🔶</p>
+          </div>
+          <div class="pt-6 text-center space-y-4">
+            <blockquote class="lg:px-18">
+              <p class="text-lg font-semibold">
+                “Avoir les bonnes insights pour prendre une décision
+                d'investisseurs est primordial, grâce à StratupSquare je prends
+                des décisionsplus sereinement ”
+              </p>
+            </blockquote>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <div>
+      <div class="justify-center text-center lg:mt-40 sm:text-5xl">
+        <b>Produits</b>
+      </div>
+      <div class="justify-center text-center mt-4">
+        <div
+          class="mt- text-base sm:text-lg sm:max-w-4xl sm:mx-auto md:mt-4 md:text-xl lg:mx-center"
+        >
+          <p>
+            Basé sur 4 piliers, StartupSquare, est un lieu d'échange, un hub de
+            création de contenu, des outils de pilotage et une automatisation
+            des processus à destination de startups, corporate, investisseurs et
+            hub. Découvrez nos produits, co-écrivons aujourd'hui, l'innovation
+            de demain.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div
+          class="container max-w-screen-xl mx-auto px-64 my-10"
+          id="features"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div class="my-2">
+              <div class="industry-card">
+                <div class="mt-4">
+                  <img
+                    src="file:///C:/Users/hpc/Desktop/index2/339047_303818.webp"
+                    alt=""
+                    class="rounded-full bg-opacity-30"
+                  />
+                </div>
+                <div class="texte-centre mt-4">
+                  <b>Une automatisation des processus</b>
+                </div>
+                <div class="mt-4">
+                  <h3>
+                    Animé d'une volonté d'efficacité et d'activation rapide de
+                    l'innovation, Startup Square propose des workflows de
+                    gouvernance projet entre les acteurs.
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="my-5 lg:m-2 items-center mt-4">
+              <div class="industry-card">
+                <div class="mt-4 cards-image">
+                  <img
+                    src="file:///C:/Users/hpc/Desktop/index2/919024_816308.webp"
+                    alt=""
+                    height="  400"
+                    width="450"
+                    class="rounded-full bg-opacity-30"
+                  />
+                </div>
+                <div class="texte-centre mt-4">
+                  <b>Un pilotage drivé par la data</b>
+                </div>
+                <div class="mt-2">
+                  <h3>
+                    Gisement d'insights, Startup Square présente sa richesse via
+                    des dashboards et capacités de recherche analytiques pour un
+                    accès fluidifié à l'information et à la décision
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="my-2 lg:m-1 items-center mt-2">
+              <div class="industry-card">
+                <div>
+                  <img
+                    src="file:///C:/Users/hpc/Desktop/index2/489204_633522.webp"
+                    alt=""
+                    class="rounded-full bg-opacity-30"
+                  />
+                </div>
+                <div class="mt-1">
+                  <b>Un hub de contenu</b>
+                </div>
+                <div class="mt-2">
+                  <h3>
+                    Orienté création et partage de savoir, Startup Square vous
+                    permet d'accédez, par sujet, à des centaines de contenus
+                    déclinés par niveau de compétences pour s’adapter à la
+                    maturité de chacun.
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-5 lg:m-2 items-center mt-20">
+              <div class="industry-card">
+                <div class="mt-4 cards-image">
+                  <img
+                    src="file:///C:/Users/hpc/Desktop/index2/925026_285396.webp"
+                    alt=""
+                    class="rounded-full bg-opacity-30"
+                  />
+                </div>
+                <div class="texte-centre mt-8">
+                  <b>Un espace d'échange communautaire</b>
+                </div>
+                <div class="mt-8">
+                  <h3>
+                    Point focal de l'écosystème de l'innovation, Startup Square
+                    rassemble en un seul lieu différents acteurs pour dégager
+                    des synergies et des opportunités de collaborations
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="justify-center text-center py-14 mt-4 sm:text-5xl">
+        <b>Comment ça marche ?</b>
+      </div>
+      <div class="justify-center text-center mt-4">
+        <p>Innover n'as jamais été aussi facile !</p>
+      </div>
+      <div>
+        <div class="container max-w-screen-xl mx-auto px-4 my-5" id="features">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="my-5 lg:m-5">
+              <div
+                class="w-14 h-14 rounded-full bg-blue-800 bg-opacity-30 text-indigo-300"
+              >
+                <img
+                  src="file:///C:/Users/hpc/Desktop/index2/t%C3%A9l%C3%A9chargement%20(6).png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-4">
+                <b>Créer votre compte</b>
+              </div>
+              <div class="mt-4">
+                <h2>
+                  En fonction de votre profil, renseignez les informations
+                  nécessaires pour vous proposer la meilleure expérience
+                  possible
+                </h2>
+              </div>
+            </div>
+
+            <div class="my-5 lg:m-5 items-center mt-4">
+              <div
+                class="w-14 h-14 flex rounded-full bg-blue-800 bg-opacity-30 text-indigo-300"
+              >
+                <img
+                  src="file:///C:/Users/hpc/Desktop/index2/t%C3%A9l%C3%A9chargement%20(7).png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-4">
+                <b>Accédez à votre dashboard </b>
+              </div>
+              <div class="mt-4">
+                <h2>
+                  Un tableau de bord personnalisé vous permet de visualiser
+                  l'ensemble de vos contenus et services en un clic
+                </h2>
+              </div>
+            </div>
+            <div class="my-5 lg:m-5 items-center">
+              <div
+                class="w-14 h-14 rounded-full bg-blue-800 bg-opacity-30 text-indigo-300"
+              >
+                <img
+                  src="file:///C:/Users/hpc/Desktop/index2/images.png"
+                  alt=""
+                />
+              </div>
+              <div class="mt-4">
+                <b>Profiter des services</b>
+              </div>
+              <div class="mt-4">
+                <h2>
+                  Utilisez les différentes applications proposées et profitez-en
+                  pour créer de la valeur
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="bg-blue-600 mt-8 py-14">
+        <div class="justify-center text-center mt-4 sm:text-5xl text-white">
+          <b>Nos engagements</b>
+        </div>
+        <div class="justify-center text-center mt-4">
+          <div class="md:mt-10 md:text-xl lg:mx-center text-white">
+            <p>Il n'y a pas de demi-mesure !</p>
+          </div>
+        </div>
+        <div>
+          <div class="container max-w-screen-xl mx-auto px-64 my-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+              <div class="my-0">
+                <div class="industry-card">
+                  <div class="mt-4">
+                    <img
+                      src="file:///C:/Users/hpc/Desktop/index2/915264_764728.webp"
+                      alt=""
+                      height="  500"
+                      width="600"
+                    />
+                  </div>
+                  <div class="mt-4 text-white text-center">
+                    <b class="mt-4">Confidentialité</b>
+
+                    <p class="mt-4">Ce qui est privé le reste</p>
+                  </div>
+                  <div class="mt-4 text-white text-center">
+                    <h3>
+                      Vous choisissez le niveau de visibilité de votre profil,
+                      les personnes autorisées à vous contacter et celles qui
+                      peuvent accéder à vos projets.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="my-5 lg:m-2 items-center mt-4">
+                <div class="industry-card">
+                  <div class="mt-4 cards-image">
+                    <img
+                      src="file:///C:/Users/hpc/Desktop/index2/946193_35579.webp"
+                      alt=""
+                      height="  500"
+                      width="600"
+                      class="my-9"
+                    />
+                  </div>
+                  <div class="mt-4 text-center text-white">
+                    <b class="justify-center texte-centre mt-4">Support</b>
+                    <p class="mt-4">Chaque client est unique</p>
+                  </div>
+                  <div class="mt-4 text-white text-center">
+                    <h3>
+                      Une équipe est présente pour répondre à vos questions et
+                      vous assister tout au long de votre parcours.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container px-32 py-14" qsdfghjk>
+      <div class="justify-center text-center mt-4 sm:text-5xl">
+        <b>Social Media</b>
+      </div>
+      <div class="justify-center text-center mt-4">
+        <p>Suivez-nous pour ne rien manquer de notre actualité !</p>
+      </div>
+      <div>
+        <div class="container max-w-screen-xl mx-auto px-4 my-5" id="features">
+          <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="my-2 lg:m-2">
+              <div>
+                <div class="s-component-content">
+                  <div class="s-mh-nudge" style="padding-top: 3px">
+                    <a
+                      href="https://www.facebook.com/StartupSquare.co"
+                      target="_blank"
+                      ><div
+                        class="s-ratio-box"
+                        style="max-width: 224px; max-height: 178px"
+                      >
+                        <div
+                          class="s-ratio-fill"
+                          style="padding-bottom: 41.98%"
+                        ></div>
+                        <div>
+                          <img
+                            alt=""
+                            title=""
+                            class="crop-default lazyloaded"
+                            data-description=""
+                            width="224"
+                            height="178"
+                            src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/9671_471651.png"
+                            data-src="//user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/9671_471651.png"
+                          />
+                        </div></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-center text-center mt-4">
+                <b>Facebook</b>
+              </div>
+            </div>
+
+            <div class="my-5 lg:m-5 items-center mt-4">
+              <div>
+                <div class="s-component-content">
+                  <div class="s-mh-nudge" style="padding-top: 3px">
+                    <a
+                      href="https://www.twitter.com/StartupSquare"
+                      target="_blank"
+                      ><div
+                        class="s-ratio-box"
+                        style="max-width: 224px; max-height: 178px"
+                      >
+                        <div
+                          class="s-ratio-fill"
+                          style="padding-bottom: 41.98%"
+                        ></div>
+                        <div>
+                          <img
+                            alt=""
+                            title=""
+                            class="crop-default lazyloaded"
+                            data-description=""
+                            width="224"
+                            height="178"
+                            src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/176576_82475.png%22"
+                            data-src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/176576_82475.png%22"
+                          />
+                        </div></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-center text-center mt-6">
+                <b>Twitter</b>
+              </div>
+            </div>
+            <div class="my-5 lg:m-5 items-center mt-4">
+              <div>
+                <div class="s-component-content">
+                  <div class="s-mh-nudge" style="padding-top: 3px">
+                    <a
+                      href="https://www.linkedin.com/company/startupsquare/"
+                      target="_blank"
+                      ><div
+                        class="s-ratio-box"
+                        style="max-width: 224px; max-height: 178px"
+                      >
+                        <div
+                          class="s-ratio-fill"
+                          style="padding-bottom: 41.98%"
+                        ></div>
+                        <div>
+                          <img
+                            alt=""
+                            title=""
+                            class="crop-default lazyloaded"
+                            data-description=""
+                            width="224"
+                            height="178"
+                            src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/426482_71781.png"
+                            data-src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/426482_71781.png"
+                          />
+                        </div></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-center text-center mt-6">
+                <b>Linked In</b>
+              </div>
+            </div>
+            <div class="my-5 lg:m-5 items-center mt-4">
+              <div>
+                <div class="s-component-content">
+                  <div class="s-mh-nudge" style="padding-top: 3px">
+                    <a
+                      href="https://www.instagram.com/startupsquare.co/"
+                      target="_blank"
+                      ><div
+                        class="s-ratio-box"
+                        style="max-width: 224px; max-height: 178px"
+                      >
+                        <div
+                          class="s-ratio-fill"
+                          style="padding-bottom: 41.98%"
+                        ></div>
+                        <div>
+                          <img
+                            alt=""
+                            title=""
+                            class="crop-default lazyloaded"
+                            data-description=""
+                            width="224"
+                            height="178"
+                            src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/33218_32843.png"
+                            data-src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/33218_32843.png"
+                          />
+                        </div></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-center text-center mt-4">
+                <b>Instagram</b>
+              </div>
+            </div>
+            <div class="my-5 lg:m-5 items-center">
+              <div>
+                <div class="s-component-content">
+                  <div class="s-mh-nudge" style="padding-top: 3px">
+                    <a
+                      href="https://www.youtube.com/channel/UCyk7tYgyFN2q0vbQjJf9Qrg"
+                      target="_blank"
+                      ><div
+                        class="s-ratio-box"
+                        style="max-width: 324px; max-height: 178px"
+                      >
+                        <div
+                          class="s-ratio-fill"
+                          style="padding-bottom: 41.98%"
+                        ></div>
+                        <div>
+                          <img
+                            alt=""
+                            title=""
+                            class="crop-default lazyloaded"
+                            data-description=""
+                            width="324"
+                            height="178"
+                            src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/186355_513572.png"
+                            data-src="http://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_960,w_480,f_auto,q_auto/1949084/186355_513572.png"
+                          />
+                        </div></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-center text-center mt-7">
+                <b>Youtube</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <b>Contact Us</b>
+        </div>
+        <div>
+          <p>info@startupsquare.co</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
